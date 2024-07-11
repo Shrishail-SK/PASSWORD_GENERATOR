@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Main Page</h1>
+        <ul>
+            <li><a href="{% url 'retrieve_password' service_name='amazon' %}">Retrieve Amazon Password</a></li>
+            <li><a href="{% url 'retrieve_password' service_name='flipkart' %}">Retrieve Flipkart Password</a></li>
+            <li><a href="{% url 'retrieve_password' service_name='aws' %}">Retrieve AWS Password</a></li>
+        </ul>
+        <a href="{% url 'password_generator' %}">Generate Passwords</a>
+    </div>
+</body>
+</html>
